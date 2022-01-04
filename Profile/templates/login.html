@@ -1,0 +1,15 @@
+{% extends 'welcome.html' %}
+{% block content %}
+    {{ response }}
+    <h1>Login</h1>
+    <form method="POST">
+      <div class="signupform">
+      {% csrf_token %}
+      <table>
+      {{ form }}
+      <tr><th><button type="submit">Login</button></th></tr>
+        <tr><th><a href="/signup/">New to Gropool? Sign up</a></th></tr>
+      </table>
+    </div>    
+    </form>
+    {% endblock %}

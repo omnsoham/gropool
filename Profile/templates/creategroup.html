@@ -1,0 +1,14 @@
+{% extends 'homepage.html' %}
+{% block content %}
+    {{ response }}
+    <h1>Create a New Group</h1>
+    <form method="POST">
+      <div class="signupyeet">
+      {% csrf_token %}
+      <table>
+      {{ group }}
+      <tr><th><button type="submit" class="profile_description">Create Group</button></th></tr>
+      </table>
+      </div>
+    </form>
+    {% endblock %}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Gropool | Grocery Will Never Be The Same   
+    </title>
+    <link rel="stylesheet" href="{% static '/css/GropoolWelcome.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <div class="main" style="background-color:black;" style="font:darkgrey;">
+            <ul class="nav-items" style="background-color:black;" style="font:darkgrey;">
+                <li class="nav-link" style="background-color:black;" style="font:darkgrey;">
+                <a href="/login/"><button .style.display='block' style="background-color:black;" style="font:darkgrey;" style="height:auto;" style="width:auto;">Login</button></a>
+                </li>
+                <li class="nav-link">
+                <a href="/signup/"><button .style.display='block' style="background-color:black;" style="font:darkgrey;" style="height:auto;" style="width:auto;">Sign Up</button></a>
+                </li>
+                <a href="/welcome/">
+                  <div class="logo"><img src="{% static '/assets/Blog-post/imageedit_11_5753541752.png' %}" class="center"></div>
+                </a>  
+            </ul>
+        </div>
+    </header>
+    {% block content %}
+        {% if val == 35 %}
+        {% include "(welcome).html" %}
+        {% endif %}
+    {% endblock %}
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+{% extends 'homepage.html' %}
+{% block content %}
+    {{ response }}<br>
+    {% for name, listitems in list_dictionary.items %}
+    <div>
+        <h2>{{ name }}</h2>
+        <ol>
+            {% for i in listitems %}
+                <li>{{ i }}</li><br>
+            {% endfor %}
+        </ol>
+    </div><br>
+    {% endfor %}<br>
+    <a href= "/create_list/"><button>Add Grocery List</button></a>
+    <a href= "/delete_list/"><button>Delete Grocery List</button></a>
+    <a href= "/create_listitem/"><button>Add Grocery List Item</button></a>
+    <a href= "/edit_listitem/"><button>Edit Grocery List Item</button></a>
+    <a href= "/delete_listitem/"><button>Delete Grocery List Item</button></a>
+{% endblock %}

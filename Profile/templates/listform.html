@@ -1,0 +1,14 @@
+{% extends 'homepage.html' %}
+{% block content %}
+    {{ response }}
+    <h1>List Item</h1>
+    <form method="POST">
+      <div class="signupyeet">
+      {% csrf_token %}
+      <table>
+      {{ form }}
+      <tr><th><button type="submit">Enter</button></th></tr>
+      </table>
+      </div>
+    </form>
+    {% endblock %}

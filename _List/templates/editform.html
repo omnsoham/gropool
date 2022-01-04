@@ -1,0 +1,14 @@
+{% extends 'homepage.html' %}
+{% block content %}
+    {{ response }}
+    <h1>Edit List Item</h1>
+    <form action= '/edit_listitem/' method="POST">
+      <div class="signupyeet">
+      {% csrf_token %}
+      <table>
+      {{ form.as_p }}
+      <button type="submit">Edit</button>
+      </table>
+      </div>
+    </form>
+    {% endblock %}

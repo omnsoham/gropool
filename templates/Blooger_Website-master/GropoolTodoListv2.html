@@ -1,0 +1,66 @@
+<script>
+    function show_category(category_id) {
+        try {
+            var category_array = document.getElementsByName('category');
+            for (var i = 0; i < category_array.length; i++) {                document.getElementById(category_array[i].id).style.display = 'none';
+            }
+            document.getElementById(category_id+'_pics').style.display='block';
+        } catch (err) {
+            alert(err);
+        }
+    }
+</script>
+<ul class="sub-nav">
+    <li><a id='zipline' href="GropoolTodoList.html" onclick="try{show_category(this.id);}catch(err){alert(err.message)}">Zipline |</a>
+
+    </li>
+    <li><a id='wall-climbing' href="GropoolTodoList.html" onclick="show_category(this.id);">Wall-Climbing |</a>
+
+    </li>
+    <li><a id='trekking' href="GropoolTodoList.html" onclick="show_category(this.id);">Trekking |</a>
+
+    </li>
+    <li><a id='scuba diving' href="GropoolTodoList.html" onclick="show_category(this.id);">Scuba Diving </a>
+
+    </li>
+</ul>
+<div class="photos" id="photos">
+    <ul name='category' id='zipline_pics' title='zipline'>
+        <li><a href="#"><img src="http://www.explorekauai.com/Kauai%20Zipline%20001.jpg" width="200" height="150" /></a>
+
+        </li>
+        <li><a href="#"><img src="http://www.explorekauai.com/Kauai%20Zipline%20001.jpg" width="200" height="150" /></a>
+
+        </li>
+        <li><a href="#"><img src="http://sportslawnews.files.wordpress.com/2011/02/zip-line-photo-2.jpg" width="200" height="150" /></a>
+
+        </li>
+        <li><a href="#"><img src="http://www.treetopasia.com/sites/default/files/bangkok-zip-line-tours.jpg?1323449807" width="200" height="150"  /></a>
+
+        </li>
+    </ul>
+    <ul name='category' id='wall-climbing_pics' title='wall-climbing' style="display:none">
+        <li><a href=" # "><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSR5HDVSdDUgHJcvsEkthGl0QXrsbPG_W04cPFWgcXcci2_EpBpLoT-Aof8" width="200 " height="150 " /></a>
+
+        </li>
+        <li><a href="# "><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS3ef8f-_grlPKKHTgLnn3Nj4XtaBDJMhSF7czn8PWxiOqYUViRflCSXrrN" width="200 " height="150 " /></a>
+
+        </li>
+    </ul>
+    <ul name='category' id='trekking_pics' title='trekking' style="display:none">
+        <li><a href="#"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJO-hVyCww9TkzF7CISfHFZPmCx1DndMFfflXb0lX8uYJdqAa3WBeJswk" width="200 " height="150 " /></a>
+
+        </li>
+        <li><a href="# "><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT9x77hpyCWEqxN47rT7MXAqxfZ2Z8ICgrnADDS9GvZlUMraYHyUko5lsQ" width="200 " height="150 " /></a>
+
+        </li>
+    </ul>
+    <ul name='category' id='scuba diving_pics' title='scuba diving' style="display:none">
+        <li><a href="# "><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTZ_avCIHWkEC6paYiB-vSQ3zNNDsHTpid9l0hC4EY39mBq38Jf_9Ok9M8" width="200 " height="150 " /></a>
+
+        </li>
+        <li><a href="# "><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSwhCiNww521O9OkFD7b0egr4S9qGllhoApA3mtjFeuPi-ebShB4sVX8drf" width="200 " height="150 " /></a>
+
+        </li>
+    </ul>
+</div>

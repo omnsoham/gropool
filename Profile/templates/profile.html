@@ -1,0 +1,16 @@
+{% extends 'homepage.html' %}
+{% block content %}
+    {{ response }}
+    <!--<img src="{{ request.user.profilepic }}">
+    <h1>Hello {{ request.user.username }}</h1>
+    Your email is {{ request.user.email }}<br>
+    Your zipcode is {{ request.user.zipcode }}<br>-->
+
+    <div class="profile">
+        <img src="../static/profilepics/{{ request.user.profilepic }}" alt="Profile Image" class="profile_image">
+        <div class="profile_username">Hello {{ request.user.username }}</div>
+        <div class="profile_discription">{{ request.user.email }}</div>
+        <div class="profile_discription">Your zipcode is {{ request.user.zipcode }}</div>
+    </div>
+    {% endblock %}
+

@@ -1,0 +1,46 @@
+{% extends 'homepage.html' %}
+{% block content %}
+    <main>
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="../static/assets/Blog-post/blog1.png" class="img" alt="blog1">
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;OmNSoham</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;February 13, 2020</span>
+                                <span>3 Comments</span>
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a href="#">About Gropool</a>
+                            <p>Gropol is the brain child of Om and Soham Kulkarni, and was created 
+                                to help their grandma and extended family during the coronavirus. 
+                                They came up with Gropool by combining the two words "grocery" and "carpool".
+                                Their main goal is to decrease the chance of getting the coronavirus by 
+                                having close friends, neighbors, and family take turns going to the grocery store,
+                                which is one of the most likely places you can get the coronavirus. This will decrease 
+                                the amount of grocery trips the average American has to take, and also reduces
+                                the amount if people at grocery stores. Big thanks to the Shooting Stars Foundation for funding. 
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                <aside class="sidebar">
+                    <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Have Questions?</h2>
+                        <div class="form-element">
+                            <input type="text" class="input-element" placeholder="Email">
+                            <button class="btn form-btn">Send</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+    {% endblock %}
+
+    <!--DONE-->

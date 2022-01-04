@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+      crossorigin="anonymous">
+    
+      
+
+      <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+      
+      <!-- --------- Owl-Carousel ------------------->
+      <link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static '/css/owl.theme.default.min.css' %}">
+      
+      <!-- ------------ AOS Library ------------------------- -->
+      <link rel="stylesheet" type="text/css" href="{% static '/css/aos.css' %}">
+      
+      <!-- Custom Style   -->
+      <link rel="stylesheet" type="text/css" href="{% static '/css/Style.css' %}">
+  
+    <title>Gropool | Grocery Will Never Be The Same</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+</style>
+<body>
+    <header>
+      <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="/homepage/" class="text-gray">Gropool</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+              <li class="nav-link">
+                <a href="/profile/">Profile</a>
+              </li>
+              <li class="nav-link">
+                <a href="/check_calendar/">Calendar</a>
+              </li>
+              <li class="nav-link">
+               <a href="/check_grocery_list/">Grocery Lists</a>
+              </li>
+              <li class="nav-link">
+                <a href="/groups/">Groups</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="social-items"><li class="social-link">
+              <a href="/welcome/">Sign Out</a></ul>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <div>
+          {% block content %}
+            {% if val == 35 %}
+            {% include "GropoolHomepage.html" %}
+            {% endif %}
+          {% endblock %}
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+              crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+              crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+              crossorigin="anonymous"></script>
+        </div>
+    </main>
+    <div style="flex-grow:1"></div>
+    <footer class="footer">
+      <div class="container">
+          <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+              <h2>About us</h2>
+              <p>Gropool is the brain child of Om and Soham Kulkarni, and was created to help their grandma and extended family during the coronavirus. They came up with the name by combining the two words "grocery" and "carpool". Big thanks to the Shooting Stars Foundation for funding.</p>
+          </div>
+          <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+              <h2>Have Questions?</h2>
+              <p>Please send us your email so we can answer your questions.</p>
+              <div class="form-element">
+                  <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+              </div>
+          </div>
+          <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+              <h2>Food Images</h2>
+              <div class="flex-row">
+                  <img src="{% static '/assets/Blog-post/yeetapple Cropped.jpg' %}" alt="pick1">
+                  <img src="{% static '/assets/Blog-post/yeetbanana Cropped.jpg' %}" alt="pick2">
+                  <img src="{% static '/assets/Blog-post/strawberry Cropped.jpg' %}" alt="pick3">
+              </div>
+              <div class="flex-row">
+                  <img src="{% static '/assets/Blog-post/mc1rlbgo_watermelon_625x300_17_April_20 Cropped.jpg' %}" alt="pick4">
+                  <img src="{% static '/assets/Blog-post/two-pears-on-a-table Cropped.jpg' %}" alt="pick5">
+                  <img src="{% static '/assets/Blog-post/commodity-blueberry Cropped.jpg' %}" alt="pick6">
+              </div>
+          </div>
+          <div class="follow" data-aos="fade-left" data-aos-delay="200">
+              <h2>Follow us</h2>
+              <p>on these platforms</p>
+              <div>
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-youtube"></i>
+              </div>
+          </div>
+      </div>
+      <div class="rights flex-row">
+          <h4 class="text-gray">
+              Copyright ©2020 All rights reserved | made by
+              <a href="https://www.youtube.com/channel/UCphdkCq7LPevv5h-4Rzbd0Q" target="_black">Tech It Right <i class="fab fa-youtube"></i>
+                  Channel</a>
+          </h4>
+      </div>  
+    </footer>
+    <!-- Jquery Library file -->
+    <script src="{% static '/js/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static '/js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static '/js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static '/js/main.js' %}"></script>
+</body>
+</html>
+
+    <!--DONE-->

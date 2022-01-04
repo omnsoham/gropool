@@ -1,0 +1,16 @@
+{% extends 'homepage.html' %}
+{% block content %}
+<div>
+    <a href="/create_group/"><button>Create Group</button></a><br>
+    {{ response }}
+    {% for group in groups %}
+    <div>
+        <h3 style="text-decoration: underline;"> {{ group.groupName }} </h3>
+        <p style="margin-left: 25px;"> {{ group.groupDescription }} </p>
+        <p style="margin-left: 25px;">{{ group.dayOfDelivery }}<p></p>
+        <p style="margin-left: 25px;">{{ group.zipcode }}</p>
+        <a href="/join_group/{{ group.groupId }}/"><button>Join Group</button></a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
